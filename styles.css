@@ -1,0 +1,14 @@
+body {
+    background-color: #a3cef1;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: gray;
+}
+
+.logo {
+    max-width: 140px; /* adjust size as needed */
+    height: auto;
+}
