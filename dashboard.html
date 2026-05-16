@@ -10,67 +10,36 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-<style>
-      /* SIDEBAR */
-
-    .header{
-      width:220px;
-      background:#111827;
-      color:white;
-      padding:30px 20px;
-    }
-
-    .logo{
-      text-align:center;
-      margin-bottom:40px;
-    }
-
-    .logo img{
-      width:70px;
-    }
-
-    .menu{
-      list-style:none;
-    }
-
-    .menu li{
-      margin:20px 0;
-      cursor:pointer;
-      transition:.3s;
-    }
-
-    .menu li:hover{
-      color:#38bdf8;
-      padding-left:5px;
-    }
-
-</style>
 
 
 </head>
 <body>
 
-     <div class="container">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logoqtr4.webp" alt="logo" height="50px" width="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>          
+    
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html" target="_self">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="courses.html" target="_self">Virtual Notebook</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="contacts.html" target="_self">Tasks</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="enroll.html" target="_self">Profile</a></li>
+                <li class="nav-item"> <a class="nav-link" href="team.html" target="_self">Logout</a></li>
+            </ul>
 
-    <!-- Header -->
-
-    <div class="header">
-
-      <div class="logo">
-        <img src="logoqtr4.webp">
-      </div>
-
-      <ul class="menu">
-        <li>Dashboard<a href="dashboard.html"></a></li>
-        <li>Virtual Notebooks</li>
-        <li>Tasks</li>
-        <li>Profile</li>
-        <li>Logout</li>
-      </ul>
-
+            <form class="header d-flex">
+                <input class="form-control me-2" type="text" placeholder="Search">
+                <button class="btn btn-primary" type="button">Search</button>
+            </form>
+        </div>
+    </nav>
     </div>
-
-
     <!--Column 2-->
     <div class="vn text-white p-4">
         <h4 class="bg-primary text-white p-3 rounded">Dashboard</h4>
