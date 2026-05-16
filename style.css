@@ -1,0 +1,38 @@
+/* HEADER */
+
+.header{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 30px;
+    background:#ffffff;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom:30px;
+}
+
+.left-section h1{
+    font-size:28px;
+    color:#111827;
+    margin-bottom:5px;
+}
+
+.left-section p{
+    color:gray;
+    font-size:14px;
+}
+
+.header-btn{
+    padding:10px 20px;
+    border:none;
+    background:#06b6d4;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.header-btn:hover{
+    background:#0891b2;
+}
