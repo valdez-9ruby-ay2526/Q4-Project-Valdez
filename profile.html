@@ -10,174 +10,134 @@
     <script src="main.js"></script> 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-
-
-    /* CARD */
-
-    .info-card{
-      width:360px;
-      background:white;
-      padding:30px;
-      border-radius:15px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.15);
+ <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    .info-card h2{
+    body{
+      background:#ececec;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      padding:20px;
+    }
+
+    .profile-container{
+      width:350px;
+      background:white;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .profile-header{
+      background:#dfe8f5;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+
+    .profile-header img{
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .upload-section{
+      padding:15px 20px 0;
+    }
+
+    .profile-content{
+      padding:20px;
+    }
+
+    .profile-content h1{
+      font-size:38px;
+      color:#0d1b4c;
       margin-bottom:25px;
-      color:#111827;
+      line-height:1;
     }
 
     .info{
-      margin-bottom:20px;
+      margin-bottom:18px;
     }
 
-    .label{
-      font-size:13px;
-      color:gray;
+    .info label{
+      display:block;
+      font-size:12px;
+      color:#777;
+      margin-bottom:5px;
     }
 
-    .value{
-      font-weight:600;
-      color:#111827;
-      margin-top:5px;
+    .info p{
+      font-weight:bold;
+      color:#111;
+      font-size:15px;
     }
 
     .btn{
       width:100%;
       padding:12px;
+      margin-top:15px;
       border:none;
       border-radius:8px;
-      background:#06b6d4;
+      background:#10b4d4;
       color:white;
+      font-size:15px;
+      font-weight:bold;
       cursor:pointer;
-      transition:.3s;
-      margin-top:10px;
+      transition:0.3s;
     }
 
     .btn:hover{
-      background:#0891b2;
+      background:#0c9ab6;
     }
-
-    .footer{
-      position:absolute;
-      bottom:15px;
-      right:20px;
-      font-size:11px;
-      color:gray;
-    }
-
-    @media(max-width:900px){
-
-      .container{
-        flex-direction:column;
-        height:auto;
-      }
-
-      .sidebar{
-        width:100%;
-      }
-
-      .profile-wrapper{
-        flex-direction:column;
-        gap:30px;
-      }
-
-      .profile-left,
-      .info-card{
-        width:100%;
-      }
-
-    }
-
   </style>
-
 </head>
+
 <body>
 
-  
-     <div class="d-flex align-text-streched">
+  <div class="profile-container">
 
-     <!--Column 1-->
-    <div class="bg-dark text-white p-4">
-        <img src="1000027625.png" width="200px">
-        <ul class="nav flex-column">
-            <li>
-                <a href="dashboard.html">Dashboard</a>
-            </li>
-            <li>
-                <a href="">Virtual Notebooks</a>
-            </li>
-            <li>
-                <a href="profile.html">Profile</a>
-            </li>
-            <li>
-                <a href="">Task</a>
-            </li>
-            <li>
-                <a href="index.html">Logout</a>
-            </li>
-        </ul>
+    <div class="profile-header">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile">
     </div>
 
-    <!-- Main -->
+    <div class="upload-section">
+      <input type="file">
+    </div>
 
-    <div class="main">
+    <div class="profile-content">
+      <h1>Student<br>Information</h1>
 
-      <div class="title">PROFILE</div>
-      <div class="subtitle">Student Information</div>
-
-      <div class="profile-wrapper">
-
-        <!-- LEFT -->
-
-        <div class="profile-left">
-
-          <img class="avatar"
-          src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-
-          <br>
-
-          <input type="file">
-
-        </div>
-
-        <!-- Student Info -->
-
-        <div class="info-card">
-
-          <h2>Student Information</h2>
-
-          <div class="info">
-            <div class="label">Student ID</div>
-            <div class="value">SN123456</div>
-          </div>
-
-          <div class="info">
-            <div class="label">Contact Number</div>
-            <div class="value">+6312345676767</div>
-          </div>
-
-          <div class="info">
-            <div class="label">Email Address</div>
-            <div class="value">9Ruby@email.com</div>
-          </div>
-
-          <div class="info">
-            <div class="label">Gender</div>
-            <div class="value">Male</div>
-          </div>
-
-          <button class="btn">Change Password</button>
-
-        </div>
-
+      <div class="info">
+        <label>Student ID</label>
+        <p>SN123456</p>
       </div>
 
-      <div class="footer">
-        ICT Q4 PROJECT | 9 Ruby ©2025
+      <div class="info">
+        <label>Contact Number</label>
+        <p>+6312345676767</p>
       </div>
 
+      <div class="info">
+        <label>Email Address</label>
+        <p>9Ruby@email.com</p>
+      </div>
+
+      <div class="info">
+        <label>Gender</label>
+        <p>Male</p>
+      </div>
+
+      <button class="btn">Change Password</button>
     </div>
 
   </div>
