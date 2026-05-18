@@ -10,166 +10,236 @@
     <script src="main.js"></script> 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    *{
+<style>
+
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, sans-serif;
+    font-family:'Poppins', sans-serif;
 }
 
 body{
-    background:#e9e9e9;
+    background:#ececec;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
-    overflow:hidden;
+    padding:20px;
 }
 
+/* MAIN CONTAINER */
+.container{
+    width:100%;
+    max-width:1100px;
+    min-height:650px;
+
+    background:
+    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+    url('https://www.transparenttextures.com/patterns/geometry.png');
+
+    border-radius:12px;
+    padding:50px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* LEFT SIDE */
+.left-section{
+    flex:1;
+}
+
+.profile-title{
+    background:#1f2940;
+    color:#fff;
+
+    display:inline-block;
+
+    padding:12px 24px;
+
+    border-radius:10px;
+
+    font-size:28px;
+    font-weight:600;
+
+    margin-bottom:20px;
+}
+
+.subtitle{
+    color:#555;
+    margin-bottom:40px;
+    font-size:15px;
+}
+
+/* PROFILE IMAGE */
+.profile-image{
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+    object-fit:cover;
+
+    display:block;
+
+    margin-bottom:25px;
+}
+
+/* FILE INPUT */
+input[type="file"]{
+    font-size:14px;
+}
+
+/* RIGHT CARD */
+.info-card{
+    width:340px;
+
+    background:#f8f8f8;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 3px 12px rgba(0,0,0,0.1);
+}
+
+.info-card h2{
+    font-size:42px;
+    line-height:1.1;
+
+    color:#1a1a1a;
+
+    margin-bottom:35px;
+}
+
+.info-group{
+    margin-bottom:22px;
+}
+
+.label{
+    color:#777;
+    font-size:13px;
+
+    margin-bottom:5px;
+}
+
+.value{
+    color:#111;
+    font-weight:600;
+    font-size:15px;
+}
+
+/* BUTTON */
+.change-btn{
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    background:#20b8d8;
+    color:white;
+
+    border-radius:7px;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    margin-top:15px;
+}
+
+.change-btn:hover{
+    background:#1698b3;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
     .container{
-      width:850px;
-      background:#ffffff;
-      border-radius:12px;
-      padding:40px;
-      display:flex;
-      justify-content:space-between;
-      gap:40px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.15);
+        flex-direction:column;
+        padding:30px;
+        text-align:center;
     }
 
-
-    /* RIGHT SECTION */
     .info-card{
-      width:320px;
-      background:#f7f7f7;
-      padding:25px;
-      border-radius:12px;
-      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+        width:100%;
+        max-width:400px;
     }
 
-    .info-card h2{
-      font-size:36px;
-      line-height:1.1;
-      margin-bottom:25px;
-      color:#222;
+    .profile-image{
+        margin:auto auto 25px;
     }
+}
 
-    .info-group{
-      margin-bottom:18px;
-    }
-
-    .label{
-      font-size:12px;
-      color:#777;
-      margin-bottom:5px;
-    }
-
-    .value{
-      font-size:14px;
-      font-weight:bold;
-      color:#111;
-    }
-
-    .change-btn{
-      width:100%;
-      padding:12px;
-      border:none;
-      background:#20b8d8;
-      color:#fff;
-      border-radius:6px;
-      font-weight:bold;
-      cursor:pointer;
-      margin-top:15px;
-    }
-
-    .change-btn:hover{
-      background:#1698b3;
-    }
-
-  </style>
+</style>
 </head>
+
 <body>
-   <div class="d-flex align-text-streched">
 
-     <!--Column 1-->
-    <div class="bg-dark text-white p-4">
-        <img src="logo.png" width="200px">
-        <ul class="nav flex-column">
-            <li>
-                <a href="dashboard.html">Dashboard</a>
-            </li>
-            <li>
-                <a href="notebook.html">Virtual Notebooks</a>
-            </li>
-            <li>
-                <a href="profile.html">Profile</a>
-            </li>
-            <li>
-                <a href="tasks.html">Task</a>
-            </li>
-            <li>
-                <a href="index.html">Logout</a>
-            </li>
-        </ul>
-    </div>
-
-  <div class="container">
+<div class="container">
 
     <!-- LEFT SIDE -->
     <div class="left-section">
 
-      <div class="profile-title">
-        PROFILE
-      </div>
+        <div class="profile-title">
+            PROFILE
+        </div>
 
-      <p class="subtitle">Student Information.</p>
+        <p class="subtitle">
+            Student Information.
+        </p>
 
-      <img
+        <img
         src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
         alt="Profile"
-        class="profile-image"
-      >
+        class="profile-image">
 
-      <input type="file">
+        <input type="file">
 
     </div>
 
     <!-- RIGHT SIDE -->
     <div class="info-card">
 
-      <h2>
-        Student<br>
-        Information
-      </h2>
+        <h2>
+            Student Information
+        </h2>
 
-      <div class="info-group">
-        <div class="label">Student ID</div>
-        <div class="value">SN123456</div>
-      </div>
+        <div class="info-group">
+            <div class="label">Student ID</div>
+            <div class="value">SN123456</div>
+        </div>
 
-      <div class="info-group">
-        <div class="label">Contact Number</div>
-        <div class="value">+639150000001</div>
-      </div>
+        <div class="info-group">
+            <div class="label">Contact Number</div>
+            <div class="value">+639150000001</div>
+        </div>
 
-      <div class="info-group">
-        <div class="label">Email Address</div>
-        <div class="value">delacruz.jr@bmontessori.edu.ph</div>
-      </div>
+        <div class="info-group">
+            <div class="label">Email Address</div>
+            <div class="value">
+                delacruz.jr@bmontessori.edu.ph
+            </div>
+        </div>
 
-      <div class="info-group">
-        <div class="label">Gender</div>
-        <div class="value">Male</div>
-      </div>
+        <div class="info-group">
+            <div class="label">Gender</div>
+            <div class="value">Male</div>
+        </div>
 
-      <button class="change-btn">
-        Change Password
-      </button>
+        <button class="change-btn">
+            Change Password
+        </button>
 
     </div>
 
-  </div>
+</div>
 
 </body>
 </html>
